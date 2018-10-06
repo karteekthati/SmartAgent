@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SmartAgent</string>
+    <string name="data_url">https://demo6977317.mockable.io/fetch_config</string>
+</resources>
