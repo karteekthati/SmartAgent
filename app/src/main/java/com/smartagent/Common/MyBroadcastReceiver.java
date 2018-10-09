@@ -9,7 +9,7 @@ import com.smartagent.Service.SimpleJobIntentService;
 public class MyBroadcastReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        if(intent.getAction().equals(Intent.ACTION_USER_UNLOCKED)){
+        if(intent.getAction().equals(Intent.ACTION_USER_UNLOCKED) || intent.getAction().equalsIgnoreCase(Intent.ACTION_DATE_CHANGED)){
             Intent i = new Intent(context, SimpleJobIntentService.class);
             i.putExtra("startwork", 1);
             SimpleJobIntentService.enqueueWork(context, i);
